@@ -1,0 +1,610 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Navbar Start */
+#navbar{
+    background: #f9f9f9;
+}
+#logo{
+    font-size: 36px;
+    font-weight: 550;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+#logo span{
+    color: #0b9204;
+}
+.navbar-toggler span{
+    
+    color: #ffa500;
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    color: #0b9204;
+
+    background: #33522e;
+    color: white;
+}
+#navbar form button{
+    background: rgb(25, 63, 23);
+    color: white;
+    border: none;
+}
+/* Navbar End */
+
+/* Home Section Start */
+.home {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/kerala_banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px) brightness(50%);
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
+.home .content {
+    position: relative; /* Ensure content is above the pseudo-element */
+    text-align: center;
+    padding-top: 200px;
+}
+
+.home .content h5 {
+    color: white;
+    font-size: 38px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+
+.home .content h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+
+.changecontent::after {
+    content: 'Munnar'; /* Initial content */
+    color: #82ca16;
+    /* color: #ffa500; */
+
+    text-shadow: 0px 1px 1px black;
+    display: inline-block;
+    font-size: 70px;
+    animation: changetext 15s infinite;
+}
+
+@keyframes changetext {
+    0%, 9% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Munnar";
+    }
+    10%, 19% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Munnar";
+    }
+    20%, 29% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Kumarakom";
+    }
+    30%, 39% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Kumarakom";
+    }
+    40%, 49% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Wayanad";
+    }
+    50%, 59% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Wayanad";
+    }
+    60%, 69% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Vattavada";
+    }
+    70%, 79% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Vattavada";
+    }
+    80%, 89% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Idukki";
+    }
+    90%, 99% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Idukki";
+    }
+    100%, 109% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Thekkady";
+    }
+    110%, 119% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Thekkady";
+    }
+    120%, 129% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Bekal Fort";
+    }
+    130%, 139% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Bekal Fort";
+    }
+    140%, 149% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Vagamon";
+    }
+    150%, 159% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Vagamon";
+    }
+    160%, 169% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Periyar";
+    }
+    170%, 179% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Periyar";
+    }
+    180%, 189% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Alleppey";
+    }
+    190%, 199% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Alleppey";
+    }
+    200%, 209% {
+        opacity: 0; 
+        transform: scale(1.2); /* Zoomed out */
+        content: "Gavi";
+    }
+    210%, 219% {
+        opacity: 1; 
+        transform: scale(1); /* Zoomed in */
+        content: "Gavi";
+    }
+}
+
+.home .content p {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.home .content a {
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.home .content a:hover {
+    background: #ffa500;
+    color: white;
+}
+
+@media (max-width: 850px) {
+    .home {
+        background-position: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .home .content h5 {
+        font-size: 25px;
+    }
+
+    .home .content h1 {
+        font-size: 38px;
+    }
+
+    .home .content p {
+        font-size: 13px;
+    }
+}
+/* Home Section End */
+
+/* Section Book Start */
+.book{
+    background: #f9f9f9;
+    padding: 50px;
+}
+.main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+}
+.main-text h1 span{
+    color: #0e5e0c;
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book .row{
+    margin-top: 30px;
+}
+.book form input, select{
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    height: 200px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    /* background: #ffa500; */
+    background: #0b9204;
+
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+/* Section Book End */
+
+
+
+
+
+/* Section Packages Start */
+/* Main heading style */
+.main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+}
+
+.main-txt h1 span {
+    color: #046a10;
+}
+
+/* Card styling */
+/* General card styling */
+/* General card styling */
+.packages .card {
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 250px; /* Fixed card height */
+    
+}
+
+/* Card image styling */
+.packages .card img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+/* Card body styling */
+.packages .card .card-body {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+}
+
+/* Show only the name initially */
+.packages .card .card-body h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 20px; /* Position the name near the top */
+    left: 20px;
+    right: 20px;
+    z-index: 2; /* Ensure it appears above the image */
+    opacity: 1; /* Make sure the name is visible initially */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Initially hidden elements */
+.packages .card .card-body p,
+.packages .card .card-body .star,
+.packages .card .card-body h6,
+.packages .card .card-body a {
+    display: none;
+}
+
+/* Hover effect for the card */
+.packages .card:hover img {
+    transform: scale(1.2); /* Zoom effect */
+}
+
+.packages .card:hover .card-body {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Show all content on hover */
+.packages .card:hover .card-body p,
+.packages .card:hover .card-body .star,
+.packages .card:hover .card-body h6,
+.packages .card:hover .card-body a {
+    display: block;
+}
+
+/* Adjust the name position on hover */
+.packages .card:hover .card-body h3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-bottom: 15px;
+    opacity: 1; /* Ensure it remains visible */
+    z-index: 1; /* Normal stacking order */
+}
+
+/* Description text */
+.packages .card .card-body p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* Star rating */
+.checked {
+    color: #ffa500;
+}
+
+.star i {
+    font-size: 15px;
+    margin-right: 2px;
+}
+
+/* Price tag */
+.packages .card .card-body h6 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* 'Book Now' button */
+.packages .card .card-body a {
+    padding: 10px;
+    text-decoration: none;
+    background: #ffa500;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.packages .card .card-body a:hover {
+    background: #ff8c00;
+}
+
+
+/* Section Packages End */
+
+
+
+
+/* Section Services Start */
+.services{
+    background: #f9f9f9;
+    margin-top: 50px;
+}
+.services .card{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    border: none;
+    cursor: pointer;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: #ffa500;
+    margin-top: 20px;
+}
+.services .card .card-body h3{
+    font-weight: 600;
+}
+.services .card .card-body{
+    text-align: center;
+}
+/* Section Services End */
+
+
+
+
+
+/* Section Gallary Start */
+.gallary{
+    margin-top: 50px;
+}
+.gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+/* Section Gallary End */
+
+
+
+
+/* About Start */
+.about{
+    padding: 50px;
+    margin-top: 50px;
+    background: #f9f9f9;
+}
+.about .card{
+    border-radius: 10px;
+}
+.about .card img{
+    border-radius: 10px;
+}
+.about h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about p{
+    font-weight: 500;
+}
+#about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa500;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .about{
+        padding: 0;
+    }
+}
+/* About End */
+
+
+
+/* Footer Start */
+#footer{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    background: #5f5d5d;
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0px 0px 1px black;
+}
+#footer h1 span{
+    color: #ffa500;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: #ffa500;
+}
+/* Footer End */
+
+
+
+
+
+
+
+
+
